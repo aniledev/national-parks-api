@@ -26,6 +26,7 @@
   <body>
     <div class="container">
       <h1>National Parks Vacation Finder</h1>
+      <!-- Search form -->
       <form action="" id="js-form" class="js-form">
         <label for="state-search"> State: </label>
         <input
@@ -33,6 +34,7 @@
           name="state-search"
           id="state-search"
           class="state-search"
+          placeholder="FL, CA, NY"
           required
         />
         <label for="max-results">Number of Results:</label>
@@ -41,18 +43,19 @@
           name="max-results"
           id="max-results"
           class="max-results"
-          value="10"
+          placeholder="10"
         />
         <div class="center">
           <input type="submit" value="Search" />
         </div>
-
-        <p id="js-error-message" class="error-message"></p>
-        <section id="results" class="hidden">
-          <h2>Your Next Adventure Awaits:</h2>
-          <ul id="results-list"></ul>
-        </section>
       </form>
+      <!-- This is where the error message would display -->
+      <p id="js-error-message" class="error-message"></p>
+      <!-- Ths is where the search results will display -->
+      <section id="results" class="hidden">
+        <h2>Your Next Adventure Awaits:</h2>
+        <ul id="results-list"></ul>
+      </section>
     </div>
   </body>
 
