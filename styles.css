@@ -40,9 +40,21 @@ input[type="submit"]:hover {
   max-width: 600px;
   margin: 0 auto;
 }
+
 h1 {
   text-align: center;
 }
+
+h2 {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 45px;
+}
+
 .error-message {
   color: red;
 }
