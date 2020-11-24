@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+button,
+input {
+  padding: 5px;
+}
+
+input {
+  margin: 5px;
+}
+
+input#max-results {
+  padding: 5px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="submit"] {
+  width: 150px;
+  height: 35px;
+  background-color: lightseagreen;
+  color: white;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
+.error-message {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
