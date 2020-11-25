@@ -24,39 +24,45 @@
   </head>
 
   <body>
-    <div class="container">
+    <header>
       <h1>National Parks Vacation Finder</h1>
-      <!-- Search form -->
-      <form action="" id="js-form" class="js-form">
-        <label for="state-search"> State: </label>
-        <input
-          type="text"
-          name="state-search"
-          id="state-search"
-          class="state-search"
-          placeholder="FL, CA, NY"
-          required
-        />
-        <label for="max-results">Number of Results:</label>
-        <input
-          type="number"
-          name="max-results"
-          id="max-results"
-          class="max-results"
-          placeholder="10"
-        />
-        <div class="center">
-          <input type="submit" value="Search" />
-        </div>
-      </form>
-      <!-- This is where the error message would display -->
-      <p id="js-error-message" class="error-message"></p>
-      <!-- Ths is where the search results will display -->
-      <section id="results" class="hidden">
-        <h2>Your Next Adventure Awaits:</h2>
-        <ul id="results-list"></ul>
-      </section>
-    </div>
+      <div class="container">
+        <!-- Search form -->
+        <form action="" id="js-form" class="js-form">
+          <label for="state-search"> State: </label>
+          <input
+            type="text"
+            name="state-search"
+            id="state-search"
+            class="state-search"
+            placeholder="FL, CA, NY"
+            required
+          />
+          <label for="max-results">Number of Results:</label>
+          <input
+            type="number"
+            name="max-results"
+            id="max-results"
+            class="max-results"
+            placeholder="10"
+          />
+          <div class="center">
+            <input type="submit" value="Search" />
+          </div>
+        </form>
+        <!-- This is where the error message would display -->
+        <p id="js-error-message" class="error-message"></p>
+        <!-- Ths is where the search results will display -->
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section id="results" class="hidden">
+          <h2>Your Next Adventure Awaits:</h2>
+          <ul id="results-list"></ul>
+        </section>
+      </div>
+    </main>
   </body>
 
   <!-- 
