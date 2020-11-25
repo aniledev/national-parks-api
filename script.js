@@ -31,6 +31,7 @@ function getSearchResults(stateSearch, limit = 10) {
   // if the response is successful, return the repsonse in a json format
   // else throw an erorr
   // then console.log the the json data
+
   fetch(url)
     .then((response) => {
       if (response.ok) {
@@ -47,19 +48,22 @@ function getSearchResults(stateSearch, limit = 10) {
 //this function displays the data in a readable format
 function displayResults(responseJson) {
   console.log(responseJson.data);
+  //   console.log(responseJson.data[1].images[1]);
   $("#results-list").empty();
   for (let i = 0; i < responseJson.data.length; i++) {
+    console.log(responseJson.data[i].images[0].url);
     $("#results-list").append(`<li>
-		<a href="${responseJson.data[i].url}"target="_blank"><h3>${responseJson.data[i].fullName} -- ${responseJson.data[i].states}</h3></a>
-		<p>${responseJson.data[i].addresses[1].postalCode}</p>
-		<p>${responseJson.data[i].description}</h2></li>`);
+		<a href="${responseJson.data[i].url}"target="_blank"><h3>${responseJson.data[i].fullName} -- ${responseJson.data[i].states}</h3></a><img src="${responseJson.data[i].images[0].url}" alt="">
+		<p>${responseJson.data[i].addresses[1].line1}, ${responseJson.data[i].addresses[1].city} ${responseJson.data[i].addresses[1].stateCode}, ${responseJson.data[i].addresses[1].postalCode}</p>
+		<p>${responseJson.data[i].description}</p></li>`);
   }
+
   $("#results").removeClass("hidden");
 }
 
 //this function handles the click on the form and captures the values
 function watchForm() {
-  $("form").submit((event) => {
+  $("form").submit(function (event) {
     // prevent the default action
     event.preventDefault();
     console.log("user clicked button");
