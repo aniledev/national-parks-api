@@ -28,8 +28,8 @@ function getSearchResults(stateSearch, limit = 10) {
   console.log(url);
 
   // fetch method send the GET request to the server using the API url we constructed
-  // if the response is successful, return the repsonse in a json format
-  // else throw an erorr
+  // if the response is successful, return the response in a json format
+  // else throw an error
   // then console.log the the json data
 
   fetch(url)
